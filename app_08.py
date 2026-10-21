@@ -1,6 +1,5 @@
 import html
 from datetime import datetime
-from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import pandas as pd
@@ -9,7 +8,7 @@ import streamlit as st
 
 st.set_page_config(page_title="철도 설비 분석 대시보드", page_icon="🚆", layout="wide")
 
-CSV_PATH = Path(__file__).resolve().with_name("analysis_result.csv")
+CSV_PATH = "/content/drive/MyDrive/데이터분석/analysis_result.csv"
 REQUIRED_COLUMNS = [
     "설비ID", "측정시각", "온도_C", "AI결과",
     "목표시각", "다음온도_C", "AI예측온도_C",
